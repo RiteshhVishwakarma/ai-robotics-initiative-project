@@ -65,6 +65,20 @@ const ResearchDetail = ({ project, onBack }) => {
             </div>
           )}
 
+          {/* Key Features */}
+          {project.features && project.features.length > 0 && (
+            <div className="research-detail-section-block">
+              <h2 className="research-detail-heading">Key Features</h2>
+              <ul className="research-detail-features-list">
+                {project.features.map((feature, index) => (
+                  <li key={index} className="research-detail-feature-item">
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {/* Implementation */}
           {project.implementation && (
             <div className="research-detail-section-block">
@@ -87,7 +101,7 @@ const ResearchDetail = ({ project, onBack }) => {
             project.demoUrl ||
             project.githubUrl) && (
             <div className="research-detail-section-block">
-              <h2 className="research-detail-heading">Media & Links</h2>
+              <h2 className="research-detail-heading">Links & Resources</h2>
               <div className="research-detail-links">
                 {project.demoUrl && (
                   <a 
@@ -96,7 +110,7 @@ const ResearchDetail = ({ project, onBack }) => {
                     rel="noopener noreferrer"
                     className="btn btn-primary"
                   >
-                    View Demo
+                    View Live Project
                   </a>
                 )}
                 {project.githubUrl && (
@@ -106,7 +120,7 @@ const ResearchDetail = ({ project, onBack }) => {
                     rel="noopener noreferrer"
                     className="btn btn-outline"
                   >
-                    GitHub Repository
+                    View Source Code
                   </a>
                 )}
               </div>

@@ -2,35 +2,59 @@
 // Add real projects here as they are completed
 
 export const researchProjects = [
-  // Example structure - remove or replace with real projects
-  // {
-  //   id: 1,
-  //   slug: "object-detection-prototype",
-  //   title: "Object Detection Prototype",
-  //   status: "Completed", // "Completed", "In Progress", "Experimental", "Prototype"
-  //   domain: "AI / ML",
-  //   summary: "A computer vision system for detecting and classifying objects in real-time video streams.",
-  //   objective: "Build a working object detection system to identify common objects using a webcam feed.",
-  //   approach: "Used pre-trained YOLO model, fine-tuned on custom dataset, implemented real-time inference pipeline.",
-  //   technologies: ["Python", "OpenCV", "PyTorch", "YOLO"],
-  //   implementation: "Implemented video capture, preprocessing pipeline, model inference, and visualization of detection results with bounding boxes.",
-  //   results: "Achieved 85% accuracy on test dataset with 15 FPS processing speed on standard hardware.",
-  //   futureWork: "Optimize for edge devices, expand object classes, improve accuracy in low-light conditions.",
-  //   images: [], // ["image1.jpg", "image2.jpg"]
-  //   videos: [], // ["demo_video.mp4"]
-  //   demoUrl: null, // "https://demo-link.com"
-  //   githubUrl: null, // "https://github.com/username/repo"
-  //   contributors: [
-  //     {
-  //       name: "Student Name",
-  //       branch: "Computer Engineering",
-  //       year: "2nd Year",
-  //       contribution: "AI Development, Model Training",
-  //       github: "https://github.com/username",
-  //       linkedin: "https://linkedin.com/in/username"
-  //     }
-  //   ]
-  // }
+  {
+    id: 1,
+    slug: "campus-hub",
+    title: "Campus Hub",
+    status: "Completed",
+    domain: "Full Stack",
+    summary: "A Django-based student community platform for discovering roommates, flats, internships, events, and marketplace listings.",
+    objective: "Create a centralized platform to help students find roommates, accommodation, internships, campus events, and buy/sell items within the college community.",
+    approach: "Developed a full-stack web application using Django framework with a focus on user experience, security, and real-world campus needs. Implemented proper authentication, database design, and responsive UI.",
+    technologies: [
+      "Django 6.0.7",
+      "Python",
+      "PostgreSQL",
+      "SQLite",
+      "HTML",
+      "Tailwind CSS",
+      "JavaScript",
+      "Pillow",
+      "Cloudinary",
+      "Gunicorn"
+    ],
+    implementation: "Built a production-ready Django application with user authentication and profile management system. Implemented 5 post categories (Roommate, Flat/PG, Events, Internship, Buy & Sell) with full CRUD operations. Added search and filtering functionality, pagination (15 posts per page), automatic post expiry system (30 days), image upload support with Cloudinary integration, and responsive mobile-first design using Tailwind CSS. Configured environment-based settings for development and production with proper security measures.",
+    results: "Successfully deployed production-ready application with complete user authentication, profile system, post management across 5 categories, search and filter capabilities, and automatic post expiry. Includes realistic seed data generation (30 users + 100 posts) for testing and development.",
+    futureWork: "Plan to add real-time notifications, mobile app version, direct messaging between users, advanced search filters, user verification system, and integration with university systems.",
+    features: [
+      "User registration and authentication",
+      "Profile management with photos and bio",
+      "5 post categories (Roommate, Flat/PG, Events, Internship, Buy & Sell)",
+      "Create, read, update, delete posts",
+      "Search by title and description",
+      "Filter by category and location",
+      "Pagination with filter preservation",
+      "Automatic 30-day post expiry",
+      "Image uploads with Cloudinary",
+      "Responsive mobile-first design",
+      "Report system for inappropriate content",
+      "Production security headers"
+    ],
+    images: [],
+    videos: [],
+    demoUrl: null, // Add live URL when deployed
+    githubUrl: "https://github.com/RiteshhVishwakarma/campushub",
+    contributors: [
+      {
+        name: "Ritesh Vishwakarma",
+        branch: "BCA",
+        year: "Student",
+        contribution: "Full Stack Development - Designed and built the complete application including backend architecture, database design, frontend UI, authentication system, and production deployment configuration",
+        github: "https://github.com/RiteshhVishwakarma",
+        linkedin: "#"
+      }
+    ]
+  }
 ];
 
 export const researchDomains = {

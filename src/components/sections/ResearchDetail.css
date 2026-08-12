@@ -130,6 +130,34 @@
   font-weight: 500;
 }
 
+/* Features List */
+.research-detail-features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.research-detail-feature-item {
+  color: var(--text-secondary);
+  padding: 0.75rem 1rem;
+  padding-left: 2.5rem;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.research-detail-feature-item::before {
+  content: "✓";
+  position: absolute;
+  left: 1rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
 /* Links */
 .research-detail-links {
   display: flex;
