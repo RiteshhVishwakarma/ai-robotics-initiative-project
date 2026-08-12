@@ -1,0 +1,71 @@
+.mentors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mentor-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.mentor-card:hover {
+  border-color: var(--accent-primary);
+}
+
+.mentor-placeholder-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  background-color: var(--bg-tertiary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-color);
+}
+
+.mentor-name {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.mentor-designation {
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+  font-size: 0.9375rem;
+}
+
+.mentor-department {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 0.9375rem;
+}
+
+.mentor-area {
+  color: var(--accent-light);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .mentors-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .mentor-card {
+    padding: 1.25rem;
+  }
+}

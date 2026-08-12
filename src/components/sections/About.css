@@ -1,0 +1,65 @@
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-philosophy {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.about-card-title {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-card-text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .about-philosophy {
+    margin-bottom: 2rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

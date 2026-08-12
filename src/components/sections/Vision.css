@@ -1,0 +1,54 @@
+.vision-section {
+  background-color: var(--bg-secondary);
+}
+
+.vision-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vision-card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.vision-card-primary {
+  background-color: var(--bg-tertiary);
+}
+
+.vision-card-secondary {
+  background-color: var(--bg-primary);
+}
+
+.vision-title {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.vision-text {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .vision-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .vision-card {
+    padding: 1.5rem;
+  }
+
+  .vision-text {
+    font-size: 1rem;
+  }
+}
