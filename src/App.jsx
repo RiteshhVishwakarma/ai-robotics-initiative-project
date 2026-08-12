@@ -18,13 +18,13 @@ function App() {
       <Navigation />
       <main>
         <Hero />
+        <Research />
         <About />
         <Domains />
-        <Benefits />
         <Projects />
+        <Benefits />
         <Team />
         <Mentors />
-        <Research />
         <Vision />
         <Join />
       </main>
