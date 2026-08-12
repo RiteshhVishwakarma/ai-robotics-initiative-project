@@ -2,8 +2,8 @@ import { recruitmentSteps, selectionCriteria } from '../../data/content';
 import './Join.css';
 
 const Join = () => {
-  // Placeholder URL - to be replaced with actual recruitment form
-  const RECRUITMENT_URL = "#recruitment-form-placeholder";
+  // Actual recruitment form URL
+  const RECRUITMENT_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfjT23v4CPRfoXUTwGgyhBGMDplaVcUD-Ci-3lSLKFkftFsmQ/viewform";
 
   return (
     <section id="join" className="section join-section">
@@ -61,7 +61,7 @@ const Join = () => {
               Apply Now
             </a>
             <p className="cta-note text-tertiary">
-              Recruitment link will be activated when the application process begins
+              Click above to fill the recruitment application form
             </p>
           </div>
         </div>
