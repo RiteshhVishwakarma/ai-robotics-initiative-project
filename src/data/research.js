@@ -42,7 +42,7 @@ export const researchProjects = [
     ],
     images: [],
     videos: [],
-    demoUrl: null, // Add live URL when deployed
+    demoUrl: "https://campushub-wy3v.onrender.com/",
     githubUrl: "https://github.com/RiteshhVishwakarma/campushub",
     contributors: [
       {
@@ -51,7 +51,56 @@ export const researchProjects = [
         year: "Student",
         contribution: "Full Stack Development - Designed and built the complete application including backend architecture, database design, frontend UI, authentication system, and production deployment configuration",
         github: "https://github.com/RiteshhVishwakarma",
-        linkedin: "#"
+        linkedin: "https://www.linkedin.com/in/ritesh-vishwakarma-272907229/"
+      }
+    ]
+  },
+  {
+    id: 2,
+    slug: "ai-robotics-initiative-website",
+    title: "AI × Robotics Initiative Website",
+    status: "Completed",
+    domain: "Full Stack",
+    summary: "A professional student-led initiative website showcasing the AI and Robotics engineering program at Ajeenkya DY Patil University with research documentation and team management.",
+    objective: "Create a credible, professional website to present the AI × Robotics Initiative to students, faculty, and external stakeholders. Showcase actual completed projects, facilitate recruitment, and maintain a research portfolio.",
+    approach: "Built a modern React-based single-page application with focus on performance, accessibility, and honest representation. Implemented research project showcase system with contributor credits, responsive design, and clean dark-themed UI matching engineering documentation aesthetics.",
+    technologies: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSS3",
+      "HTML5",
+      "CSS Custom Properties"
+    ],
+    implementation: "Developed a complete frontend application with 12 major sections including hero, research showcase, team management, and recruitment. Built reusable component architecture with proper data separation. Implemented responsive navigation with mobile hamburger menu, smooth scrolling, and accessibility features (ARIA labels, keyboard navigation, focus states). Created research project detail pages with contributor credit system. Added Phase 2 enhancements including improved responsive behavior, accessibility improvements, and UI consistency polish.",
+    results: "Successfully delivered production-ready website with complete frontend structure, research documentation infrastructure, and recruitment integration. Achieved responsive design across all devices, enhanced accessibility with keyboard and screen reader support, and proper SEO optimization. Website effectively showcases Campus Hub as the first completed project with proper technical documentation.",
+    futureWork: "Add more completed research projects as they are developed, implement analytics tracking, add image optimization, integrate with university systems if needed, and potentially add content management capabilities for easier updates.",
+    features: [
+      "Professional dark-themed UI",
+      "Research & Experiments showcase",
+      "Project detail pages with contributor credits",
+      "Responsive mobile-first design",
+      "Smooth scrolling navigation",
+      "Mobile hamburger menu",
+      "Team member management",
+      "Faculty mentor section",
+      "Student recruitment integration",
+      "Accessibility features (ARIA, keyboard nav)",
+      "Focus states and reduced motion support",
+      "SEO optimized structure"
+    ],
+    images: [],
+    videos: [],
+    demoUrl: null,
+    githubUrl: "https://github.com/RiteshhVishwakarma/ai-robotics-initiative-project",
+    contributors: [
+      {
+        name: "Ritesh Vishwakarma",
+        branch: "BCA",
+        year: "Student",
+        contribution: "Full Stack Development - Designed and built the complete website including component architecture, responsive design, research showcase system, accessibility features, and deployment configuration",
+        github: "https://github.com/RiteshhVishwakarma",
+        linkedin: "https://www.linkedin.com/in/ritesh-vishwakarma-272907229/"
       }
     ]
   }
