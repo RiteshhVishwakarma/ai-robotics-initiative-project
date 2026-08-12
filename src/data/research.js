@@ -91,7 +91,7 @@ export const researchProjects = [
     ],
     images: [],
     videos: [],
-    demoUrl: null,
+    demoUrl: "https://myteamportfolioadypu.netlify.app",
     githubUrl: "https://github.com/RiteshhVishwakarma/ai-robotics-initiative-project",
     contributors: [
       {
