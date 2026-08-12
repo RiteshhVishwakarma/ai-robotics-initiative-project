@@ -1,5 +1,7 @@
 .app {
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* Container */
@@ -7,18 +9,21 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 .container-wide {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 1.5rem;
+  width: 100%;
 }
 
 /* Section */
 .section {
   padding: 4rem 0;
   border-bottom: 1px solid var(--border-color);
+  width: 100%;
 }
 
 .section-title {
@@ -33,6 +38,7 @@
   max-width: 800px;
   margin: 0 auto 3rem;
   font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 /* Button */
@@ -44,6 +50,9 @@
   transition: all 0.2s ease;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -57,6 +66,11 @@
   transform: translateY(-1px);
 }
 
+.btn-primary:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 2px;
+}
+
 .btn-outline {
   background-color: transparent;
   color: var(--accent-light);
@@ -66,6 +80,11 @@
 .btn-outline:hover {
   background-color: var(--accent-primary);
   color: white;
+}
+
+.btn-outline:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
 }
 
 /* Card */
@@ -86,32 +105,46 @@
 .grid {
   display: grid;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.25rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .section {
     padding: 3rem 0;
   }
   
   .section-title {
     margin-bottom: 2rem;
+    font-size: 1.75rem;
   }
   
   .section-subtitle {
     margin-bottom: 2rem;
     font-size: 1rem;
+    padding: 0 0.5rem;
   }
   
   .grid {
@@ -122,6 +155,28 @@
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
   }
 }
 
@@ -157,4 +212,17 @@
 
 .mt-4 {
   margin-top: 2rem;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .btn,
+  .card {
+    transition: none;
+  }
+
+  .btn:hover,
+  .card:hover {
+    transform: none;
+  }
 }

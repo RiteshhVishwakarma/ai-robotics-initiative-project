@@ -1,8 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu on escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -24,32 +48,43 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="navigation">
+    <nav className="navigation" role="navigation" aria-label="Main navigation">
       <div className="container">
         <div className="nav-content">
-          <div className="nav-logo" onClick={() => scrollToSection('hero')}>
+          <button 
+            className="nav-logo" 
+            onClick={() => scrollToSection('hero')}
+            aria-label="Go to home"
+          >
             <span className="logo-text">AI × Robotics Initiative</span>
-          </div>
+          </button>
 
           <button 
             className="nav-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle navigation menu"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMenuOpen}
+            aria-controls="main-menu"
           >
-            <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
+            <span className={`hamburger ${isMenuOpen ? 'open' : ''}`} aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </span>
           </button>
 
-          <div className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
+          <div 
+            id="main-menu"
+            className={`nav-menu ${isMenuOpen ? 'open' : ''}`}
+            role="menu"
+          >
             <ul className="nav-links">
               {navItems.map((item) => (
-                <li key={item.id}>
+                <li key={item.id} role="none">
                   <button 
                     onClick={() => scrollToSection(item.id)}
                     className="nav-link"
+                    role="menuitem"
                   >
                     {item.label}
                   </button>
@@ -59,6 +94,7 @@ const Navigation = () => {
             <button 
               onClick={() => scrollToSection('join')}
               className="btn btn-primary nav-cta"
+              role="menuitem"
             >
               Join Us
             </button>
