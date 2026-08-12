@@ -4,24 +4,24 @@ export const founder = {
   university: "Ajeenkya DY Patil University, Pune",
   description: "Coordinating initiative direction, project coordination, and interdisciplinary collaboration.",
   links: {
-    linkedin: "#",
-    github: "#",
-    portfolio: "#"
+    linkedin: "https://www.linkedin.com/in/ritesh-vishwakarma-272907229/",
+    github: "https://github.com/RiteshhVishwakarma/",
+    portfolio: "https://riteshvishportfolio.netlify.app/"
   }
 };
 
 export const teamMembers = [
   {
     id: 1,
-    name: "Team Member",
+    name: "Ritesh Vishwakarma",
     branch: "Computer Engineering",
-    year: "2nd Year",
+    year: "3rd Year",
     domain: "AI / ML",
     role: "Machine Learning Developer",
     placeholder: true,
     links: {
-      github: "#",
-      linkedin: "#"
+      github: "https://github.com/RiteshhVishwakarma/",
+      linkedin: "https://www.linkedin.com/in/ritesh-vishwakarma-272907229/"
     }
   },
   {
